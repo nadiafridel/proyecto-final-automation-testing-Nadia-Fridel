@@ -1,7 +1,4 @@
 import logging
-import os
-
-os.makedirs("reports/logs", exist_ok=True)
 
 logging.basicConfig(
     filename="reports/logs/test_execution.log",

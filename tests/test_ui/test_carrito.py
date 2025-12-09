@@ -15,4 +15,4 @@ def test_producto_correcto_en_carrito(usuario_logueado):
     nombres = carrito.obtener_nombres_productos()
     print(f"Producto(s) en el carrito: {nombres}")
 
-    carrito.driver.save_screenshot('reports/productoAgregado.png')
+   

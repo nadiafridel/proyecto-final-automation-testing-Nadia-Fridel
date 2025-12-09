@@ -5,7 +5,6 @@ from selenium.webdriver.support import expected_conditions as EC
 
 class LoginPage:
 
-# Selectores    
     URL = "https://www.saucedemo.com/"
 
     _USER_INPUT = (By.ID, "user-name")
@@ -14,12 +13,10 @@ class LoginPage:
     _ERROR_MESSAGE = (By.CSS_SELECTOR, "[data-test='error']")
 
 
-# Constructor
     def __init__(self, driver):
         self.driver = driver
         self.wait = WebDriverWait(driver, 10)
 
-# Métodos
     def abrir(self):
         self.driver.get(self.URL)
         return self
@@ -47,7 +44,6 @@ class LoginPage:
         return self
 
 
-#Devuelve True si el mensaje de error aparece en pantalla
     def esta_error_visible(self) -> bool:
         try:
             self.wait.until(EC.visibility_of_element_located(self._ERROR_MESSAGE))
@@ -55,7 +51,6 @@ class LoginPage:
         except:
             return False
 
-#Devuelve el texto del mensaje de error si está visible.
     def obtener_mensaje_error(self) -> str:
         if self.esta_error_visible():
             return self.driver.find_element(*self._ERROR_MESSAGE).text

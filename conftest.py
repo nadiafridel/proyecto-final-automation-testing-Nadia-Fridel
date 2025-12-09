@@ -53,7 +53,6 @@ def pytest_runtest_makereport(item, call):
 
             driver.save_screenshot(screenshot_path)
 
-            # Guardamos la ruta en el reporte
             rep.extra = getattr(rep, "extra", [])
             rep.extra.append(extras.image(screenshot_path))
 

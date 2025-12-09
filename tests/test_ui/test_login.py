@@ -19,7 +19,7 @@ def test_login_desde_csv(driver, usuario, clave, debe_funcionar, descripcion):
 @pytest.mark.smoke
 def test_login_usuario_valido_smoke(driver):
     logger.info("Iniciando test de login exitoso")
-    """Test de smoke para verificar que al menos un login válido funciona"""
+    
     login = LoginPage(driver)
     login.abrir().login_completo("standard_user", "secret_sauce")
     assert "inventory.html" in driver.current_url
