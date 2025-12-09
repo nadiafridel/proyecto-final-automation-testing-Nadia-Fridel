@@ -23,3 +23,7 @@ pip install -r requirements.txt
 
 ## Cómo ejecutar las pruebas
 pytest -v --html=reports/report.html
+
+## Autor
+Nadia Fridel
+
